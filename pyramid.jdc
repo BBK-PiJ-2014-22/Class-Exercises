@@ -1,0 +1,12 @@
+int number = 1;
+
+while (number < 8){
+	int count = 0;
+	while (count < number){
+		print(number);
+		count = count + 1;
+	}
+	println("");
+	number = number + 1;
+}
+println("end");
