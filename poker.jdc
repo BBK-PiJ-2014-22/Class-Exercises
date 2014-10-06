@@ -2,7 +2,7 @@
 
 int cardOneNum = 5;
 int cardTwoNum = 5;
-int cardThrNum = 5;
+int cardThrNum = 2;
 int cardForNum = 2;
 int cardFivNum = 2;
 
@@ -60,7 +60,6 @@ while (sortTimes < 5){
 String hand = "";
 
 
-while (hand == ""){
 
 	if (cardFivNum - cardForNum == 1 &&
 	    cardForNum - cardThrNum == 1 &&
@@ -91,12 +90,8 @@ while (hand == ""){
 	    	  cardForSuit == cardThrSuit &&
 	    	  cardThrSuit == cardTwoSuit &&
 	   	  cardTwoSuit == cardOneSuit){
-	     	  hand = "Flush";
-	
-	}else if (	    
+	     	  hand = "Flush";}
 
-	     	 
-}
  
 
 
