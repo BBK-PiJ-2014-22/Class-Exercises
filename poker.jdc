@@ -3,8 +3,8 @@
 int cardOneNum = 5;
 int cardTwoNum = 5;
 int cardThrNum = 5;
-int cardForNum = 5;
-int cardFivNum = 1;
+int cardForNum = 2;
+int cardFivNum = 2;
 
 String cardOneSuit = "H";
 String cardTwoSuit = "H";
@@ -79,9 +79,10 @@ while (hand == ""){
 	     	     hand = "4 OF A KIND";
 	     	     
 	}else if (cardOneNum == cardTwoNum &&
-	     	  cardTwoNum == cardThrNum &&
-	     	  cardThrNum == cardForNum &&
-	     	  cardOneNum == cardTwoNum
+	     	  cardForNum == cardFivNum &&
+	     	  (cardThrNum == cardTwoNum ||
+	     	   cardThrNum ==  cardForNum)
+	     	  
 	     	 ){
 	     	 
 	     	 hand = "Full House";
@@ -90,9 +91,9 @@ while (hand == ""){
 	    	  cardForSuit == cardThrSuit &&
 	    	  cardThrSuit == cardTwoSuit &&
 	   	  cardTwoSuit == cardOneSuit){
-
 	     	  hand = "Flush";
-	     	 }	    
+	
+	}else if (	    
 
 	     	 
 }
