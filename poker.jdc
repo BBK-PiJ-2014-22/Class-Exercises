@@ -2,19 +2,20 @@
 
 int cardOneNum = 5;
 int cardTwoNum = 4;
-int cardThrNum = 3;
+int cardThrNum = 8;
 int cardForNum = 2;
 int cardFivNum = 1;
 
-String cardOneNum = "H";
-String cardTwoNum = "S";
-String cardThrNum = "C";
-String cardForNum = "D";
-String cardOneNum = "H";
+String cardOneSuit = "H";
+String cardTwoSuit = "S";
+String cardThrSuit = "C";
+String cardForSuit = "D";
+String cardFivSuit = "H";
 
-int sortTimes = 0
+int sortTimes = 0;
 
 //order cards
+
 
 while (sortTimes < 5){
 
@@ -23,34 +24,64 @@ while (sortTimes < 5){
 	if (cardOneNum > cardTwoNum){
 		cardTempNum = cardTwoNum;
 		cardTwoNum = cardOneNum;
-		cardOneNum = cardTwoNum;
+		cardOneNum = cardTempNum;
+	}
+
 
 	if (cardTwoNum > cardThrNum){
 		cardTempNum = cardThrNum;
 		cardThrNum = cardTwoNum;
-		cardTwoNum = cardThrNum;
-
+		cardTwoNum = cardTempNum;
+	}
+	
+	
 	if (cardThrNum > cardForNum){
 		cardTempNum = cardForNum;
 		cardForNum = cardThrNum;
-		cardThrNum = cardForNum;
+		cardThrNum = cardTempNum;
+	}
 
+	
 	if (cardForNum > cardFivNum){
 		cardTempNum = cardFivNum;
 		cardFivNum = cardForNum;
-		cardForNum = cardFivNum;
+		cardForNum = cardTempNum;
+	}
+
+	sortTimes = sortTimes +1;
 
 }
 	
+println("Sort over");
+println(cardOneNum);
+println(cardTwoNum);
+println(cardThrNum);
+println(cardForNum);
+println(cardFivNum);
+println("");
+
+
+//Check Hands	
+
+string Hand = ""
+
+while string Hand == ""
+
+if (cardNumFiv - cardNumFor == 1 &&
+    cardNumFor - cardNumThr == 1 &&
+    cardNumThr - cardNumTwo == 1 &&
+    cardNumTwo - cardNumOne == 1
+    ){
+    if(
+    if (cardSuitFiv == cardSuitFor &&
+    	cardSuitFor == cardSuitThr &&
+    	cardSuitThr == cardSuitTwo &&
+    	cardSuitTwo == cardSuitOne
+    	){
+    	
+    	
+
 	
-println cardOneNum;
-println cardTwoNum;
-println cardThrNum;
-println cardOneNum;
-println cardOneNum;
-
-
-
 
 
 
