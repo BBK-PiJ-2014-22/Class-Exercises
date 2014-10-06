@@ -1,0 +1,56 @@
+//read cards
+
+int cardOneNum = 5;
+int cardTwoNum = 4;
+int cardThrNum = 3;
+int cardForNum = 2;
+int cardFivNum = 1;
+
+String cardOneNum = "H";
+String cardTwoNum = "S";
+String cardThrNum = "C";
+String cardForNum = "D";
+String cardOneNum = "H";
+
+int sortTimes = 0
+
+//order cards
+
+while (sortTimes < 5){
+
+	int cardTempNum = 0;
+
+	if (cardOneNum > cardTwoNum){
+		cardTempNum = cardTwoNum;
+		cardTwoNum = cardOneNum;
+		cardOneNum = cardTwoNum;
+
+	if (cardTwoNum > cardThrNum){
+		cardTempNum = cardThrNum;
+		cardThrNum = cardTwoNum;
+		cardTwoNum = cardThrNum;
+
+	if (cardThrNum > cardForNum){
+		cardTempNum = cardForNum;
+		cardForNum = cardThrNum;
+		cardThrNum = cardForNum;
+
+	if (cardForNum > cardFivNum){
+		cardTempNum = cardFivNum;
+		cardFivNum = cardForNum;
+		cardForNum = cardFivNum;
+
+}
+	
+	
+println cardOneNum;
+println cardTwoNum;
+println cardThrNum;
+println cardOneNum;
+println cardOneNum;
+
+
+
+
+
+
