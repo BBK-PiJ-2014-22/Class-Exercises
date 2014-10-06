@@ -1,23 +1,45 @@
-//read cards
+//init
 
-int cardOneNum = 5;
-int cardTwoNum = 5;
-int cardThrNum = 2;
-int cardForNum = 2;
-int cardFivNum = 2;
+int cardOneNum;
+int cardTwoNum;
+int cardThrNum;
+int cardForNum;
+int cardFivNum;
 
-String cardOneSuit = "H";
-String cardTwoSuit = "H";
-String cardThrSuit = "H";
-String cardForSuit = "H";
-String cardFivSuit = "H";
+String cardOneSuit;
+String cardTwoSuit;
+String cardThrSuit;
+String cardForSuit;
+String cardFivSuit;
+
+//Read Cards
+
+//String valEntry;
+//int numEntry;
+//String suitEntry;
+
+//while
+//println("Value of card:")
+//entry = System.console().read()
 
 
 
-int sortTimes = 0;
+
+
+//println(("Suit of card:")
+
+
+
+
+
+
+
+
+
 
 //order cards
 
+int sortTimes = 0;
 
 while (sortTimes < 5){
 
@@ -70,6 +92,7 @@ String hand = "";
 	    cardThrSuit == cardTwoSuit &&
 	    cardTwoSuit == cardOneSuit){
 		hand = "Straight Flush";
+		
 	}else if ((cardTwoNum == cardThrNum &&
 	       	   cardThrNum == cardForNum)&&
 	     	  (cardOneNum == cardThrNum ||
@@ -92,10 +115,24 @@ String hand = "";
 	   	  cardTwoSuit == cardOneSuit){
 	     	  hand = "Flush";}
 
- 
+	}else if (cardFivSuit == cardForSuit &&
+	    	  cardForSuit == cardThrSuit &&
+	    	  cardThrSuit == cardTwoSuit &&
+	   	  cardTwoSuit == cardOneSuit){
+	     	  hand = "Flush";} 
 
+	}else if (cardFivNum - cardForNum == 1 &&
+	    	  cardForNum - cardThrNum == 1 &&
+	     	  cardThrNum - cardTwoNum == 1 &&
+	    	  cardTwoNum - cardOneNum == 1
+	     	  hand = "Straight";}
+	
+	
 
-
+	     	  
+	     	  
+	     	  
+	     	  
 print("Hand: ");
 println(hand);
   	
