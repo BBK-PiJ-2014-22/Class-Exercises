@@ -2,15 +2,17 @@
 
 int cardOneNum = 5;
 int cardTwoNum = 4;
-int cardThrNum = 8;
+int cardThrNum = 3;
 int cardForNum = 2;
 int cardFivNum = 1;
 
 String cardOneSuit = "H";
-String cardTwoSuit = "S";
-String cardThrSuit = "C";
-String cardForSuit = "D";
+String cardTwoSuit = "H";
+String cardThrSuit = "H";
+String cardForSuit = "H";
 String cardFivSuit = "H";
+
+
 
 int sortTimes = 0;
 
@@ -61,27 +63,31 @@ println(cardFivNum);
 println("");
 
 
+
+
+
+
+
 //Check Hands	
 
-string Hand = ""
+String hand = "";
 
-while string Hand == ""
 
-if (cardNumFiv - cardNumFor == 1 &&
-    cardNumFor - cardNumThr == 1 &&
-    cardNumThr - cardNumTwo == 1 &&
-    cardNumTwo - cardNumOne == 1
-    ){
-    if(
-    if (cardSuitFiv == cardSuitFor &&
-    	cardSuitFor == cardSuitThr &&
-    	cardSuitThr == cardSuitTwo &&
-    	cardSuitTwo == cardSuitOne
-    	){
+while (hand == ""){
+
+	if (cardFivNum - cardForNum == 1 &&
+	    cardForNum - cardThrNum == 1 &&
+	    cardThrNum - cardTwoNum == 1 &&
+	    cardTwoNum - cardOneNum == 1 &&
+	    cardFivSuit == cardForSuit &&
+	    cardForSuit == cardThrSuit &&
+	    cardThrSuit == cardTwoSuit &&
+	    cardTwoSuit == cardOneSuit){
+		hand = "Straight Flush";
+		break;
+		}
+}
     	
-    	
-
-	
-
-
-
+print("Hand: ");
+println(hand);
+  	
