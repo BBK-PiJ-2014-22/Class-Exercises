@@ -1,0 +1,14 @@
+int max = 0;
+int entry = 0;
+String str;
+
+while (entry > -1){
+        println("Enter Number");	 
+	str = System.console().readLine();
+	entry = Integer.parseInt(str);
+	if (entry > max){
+		max = entry;
+	}
+} 
+
+println("Highest Entry: "+max);

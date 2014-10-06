@@ -1,0 +1,18 @@
+int numOne, numTwo, numProd;
+String str;
+
+println("First Number:");	 
+str = System.console().readLine();
+numOne = Integer.parseInt(str);
+
+println("Second Number:");	 
+str = System.console().readLine();
+numTwo = Integer.parseInt(str);
+
+numProd = 0;
+for (int i=0; i < numTwo; i++){
+	numProd = numProd + numOne;
+}
+
+println(numOne + " * " + numTwo + " = " +numProd);
+	

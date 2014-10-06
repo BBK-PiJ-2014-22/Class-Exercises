@@ -1,0 +1,34 @@
+int numOne, numTwo;
+int numDiv = 0 ;
+int numRem = 0;
+String str;
+
+println("First Number:");	 
+str = System.console().readLine();
+numOne = Integer.parseInt(str);
+
+println("Second Number:");	 
+str = System.console().readLine();
+numTwo = Integer.parseInt(str);
+                   
+//dostuff
+
+int numWork = numOne - numTwo;
+
+while (numWork > -1) {
+
+       	numDiv = numDiv + 1;
+	numWork = numWork - numTwo;
+
+}
+
+	
+if (numWork == 0){
+	numRem = 0;
+} else{
+	numRem = numWork + numTwo;
+}
+
+
+println(numOne + " / " + numTwo + " = " + numDiv + " remainder " + numRem);
+	

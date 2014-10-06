@@ -1,0 +1,34 @@
+int numOne, numTwo, numThree, numTemp;
+String str;
+
+println("First Number:");	 
+str = System.console().readLine();
+numOne = Integer.parseInt(str);
+
+println("Second Number:");	 
+str = System.console().readLine();
+numTwo = Integer.parseInt(str);
+
+println("Third Number:");	                    
+str = System.console().readLine();
+numThree = Integer.parseInt(str);
+
+if (numOne > numTwo){
+	numTemp = numOne;
+	numOne = numTwo;
+	numTwo = numTemp;
+}
+
+if (numTwo > numThree){
+	numTemp = numTwo;
+	numTwo = numThree;
+	numThree = numTemp;
+}
+
+if (numOne > numTwo){
+	numTemp = numOne;
+	numOne = numTwo;	
+	numTwo = numTemp;	
+}
+
+println(numOne + ", " + numTwo + ", " + numThree);

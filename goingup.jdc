@@ -1,0 +1,35 @@
+int max = 0;
+int entry = 0;
+int lastEntry = 0;
+String str;
+boolean sequence = true;
+boolean ascending = true;
+
+println("Enter Number");	 
+str = System.console().readLine();
+lastentry = Integer.parseInt(str);
+
+println("Enter Number");	 
+str = System.console().readLine();
+entry = Integer.parseInt(str);
+
+if (lastentry > entry){
+	{ascending = false
+}
+
+while (entry > -1){
+	lastEntry = entry;
+        println("Enter Number");	 
+	str = System.console().readLine();
+	entry = Integer.parseInt(str);
+
+	if (sequence && entry > 0){
+		if ((entry - lastEntry != 1 && ascending = true) 
+					|| 
+		     (lastentry - entry != 1 && ascending = false)){
+			sequence = false;
+		}
+	}
+} 
+
+println("Sequence: "+ sequence);
