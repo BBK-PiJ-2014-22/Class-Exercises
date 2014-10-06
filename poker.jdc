@@ -1,9 +1,9 @@
 //read cards
 
 int cardOneNum = 5;
-int cardTwoNum = 4;
-int cardThrNum = 3;
-int cardForNum = 2;
+int cardTwoNum = 5;
+int cardThrNum = 5;
+int cardForNum = 5;
 int cardFivNum = 1;
 
 String cardOneSuit = "H";
@@ -54,19 +54,6 @@ while (sortTimes < 5){
 
 }
 	
-println("Sort over");
-println(cardOneNum);
-println(cardTwoNum);
-println(cardThrNum);
-println(cardForNum);
-println(cardFivNum);
-println("");
-
-
-
-
-
-
 
 //Check Hands	
 
@@ -84,10 +71,35 @@ while (hand == ""){
 	    cardThrSuit == cardTwoSuit &&
 	    cardTwoSuit == cardOneSuit){
 		hand = "Straight Flush";
-		break;
-		}
+	}else if ((cardTwoNum == cardThrNum &&
+	       	   cardThrNum == cardForNum)&&
+	     	  (cardOneNum == cardThrNum ||
+	     	   cardFivNum == cardThrNum)){
+	     	 
+	     	     hand = "4 OF A KIND";
+	     	     
+	}else if (cardOneNum == cardTwoNum &&
+	     	  cardTwoNum == cardThrNum &&
+	     	  cardThrNum == cardForNum &&
+	     	  cardOneNum == cardTwoNum
+	     	 ){
+	     	 
+	     	 hand = "Full House";
+
+	}else if (cardFivSuit == cardForSuit &&
+	    	  cardForSuit == cardThrSuit &&
+	    	  cardThrSuit == cardTwoSuit &&
+	   	  cardTwoSuit == cardOneSuit){
+
+	     	  hand = "Flush";
+	     	 }	    
+
+	     	 
 }
-    	
+ 
+
+
+
 print("Hand: ");
 println(hand);
   	
