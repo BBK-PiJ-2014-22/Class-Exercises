@@ -1,0 +1,25 @@
+//Generate random target number
+
+Double random = Math.abs(1000 * Math.random());
+int targetNumber = intValue(random);
+int guessNumber = -1;
+int totalGuesses = 0;
+String guessString;
+
+while (guessNumber != targetNumber){
+	guessString = System.console().readLine();
+	guessNumber = Integer.parseInt(guessString);
+	
+	if (targetNumber < guessNumber ){
+		println("No! My number is lower.");
+	}else if (targetNumber > guessNumber){
+		println("No! My number is lower.");
+	}else{
+		println("CORRECT!");
+	}
+	
+	totalGuesses = totalGuesses +1;
+	}
+		
+
+println("It took you " + totalGuesses + " to get it right!");
