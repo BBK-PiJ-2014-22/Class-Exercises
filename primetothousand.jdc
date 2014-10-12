@@ -5,7 +5,7 @@ boolean isprime = true;
 
 while (number < 1001){
 	
-	println("Starting main loop"); //debug
+	//debug println("Starting main loop"); 
 
 	//Starting from 2, check if number % testnum = 0
 	//If it is, set prime to false, and don't check anymore
@@ -15,16 +15,12 @@ while (number < 1001){
 	isprime = true;
 	
 	while (isprime && testnum < (number/2)){
-		println("Starting loop with" + testnum); //debug
 		if(number % testnum == 0){
 			isprime = false;
-			println("Not prim"); //debug
 		}
-		testnum = testnum++;
-		println("Testnum now" + testnum); //debug
+		testnum = testnum + 1;
 	}
 	
-	println("printing if prime..."); //debug
 	
 	if (isprime){
 		println(number);
@@ -32,7 +28,6 @@ while (number < 1001){
 	
 	number = number + 1;
 	
-	println("Adding number");//debug
-}
 	
+}	
 
