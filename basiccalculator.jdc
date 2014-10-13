@@ -1,0 +1,10 @@
+String numTextOne = System.console().readLine();
+String numTextTwo = System.console().readLine();
+Double numDoubOne = Double.parseDouble(numTextOne);
+Double numDoubTwo = Double.parseDouble(numTextTwo);
+
+println(numDoubOne);
+println(numDoubTwo);
+
+
+
