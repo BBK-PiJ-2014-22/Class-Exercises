@@ -1,10 +1,16 @@
+
+println("Enter first number:");
 String numTextOne = System.console().readLine();
+
+println("Enter second number:");
 String numTextTwo = System.console().readLine();
+
 Double numDoubOne = Double.parseDouble(numTextOne);
 Double numDoubTwo = Double.parseDouble(numTextTwo);
 
 println(numDoubOne);
 println(numDoubTwo);
+
 
 
 
