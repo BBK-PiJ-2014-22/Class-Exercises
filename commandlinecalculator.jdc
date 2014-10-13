@@ -1,0 +1,51 @@
+double result = 0.0;
+
+String entry = System.console().readLine();
+
+String strOperandOne = "";
+String strOperandTwo = "";
+char operator = ' ';
+boolean flagOperator = false;
+int d;
+
+for (d = 0; d < entry.length(); d++){
+	if (	entry.charAt(d) == '+' ||
+		entry.charAt(d) == ('-') ||
+  	    	entry.charAt(d) == ('/') ||	
+  	    	entry.charAt(d) == ('*') ){
+  		
+  		flagOperator = true;
+  		
+		if (entry.charAt(d) != (' ')){
+			operator = entry.charAt(d);
+  		}
+  	
+  	}else if (!flagOperator){
+  		strOperandOne = strOperandOne + entry.charAt(d);
+  	
+  	}else if (flagOperator){
+  		strOperandTwo = strOperandOne + entry.charAt(d);
+  	}else {println("Something went wrong...");
+	}
+}
+
+double doubOperandOne = Double.parseDouble(strOperandOne);
+double doubOperandTwo = Double.parseDouble(strOperandTwo); 
+
+
+//calculator
+
+if (operator == ('+')){
+	result = doubOperandOne + doubOperandTwo;
+}else if(operator == ('-')){
+	result = doubOperandOne - doubOperandTwo;
+}else if(operator == ('*')){
+	result = doubOperandOne * doubOperandTwo;
+}else if(operator == ('/')){
+	result = doubOperandOne / doubOperandTwo;
+}else{
+	operator = 'E';
+	println(operator);
+}
+	
+println(strOperandOne + " " + operator + " " + strOperandTwo + " = " + result);
