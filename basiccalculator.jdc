@@ -17,14 +17,17 @@ println("		/ - Divide");
 
 String operator = System.console().readLine();
 
-if (operator.equals ("+")){
+if (operator.equals("+")){
 	result = numDoubOne + numDoubTwo;
+}else if(operator.equals("-")){
+	result = numDoubOne - numDoubTwo;
+}else if(operator.equals("*")){
+	result = numDoubOne * numDoubTwo;
+}else if(operator.equals("/")){
+	result = numDoubOne / numDoubTwo;
+}else{
+	operator = "Unknown Operator";
+	println(operator);
 }
-
+	
 println(numTextOne + " " + operator + " " + numTextTwo + " = " + result);
-
-
-
-
-
-
