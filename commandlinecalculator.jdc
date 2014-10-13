@@ -1,5 +1,5 @@
 double result = 0.0;
-
+println("Enter calc:");
 String entry = System.console().readLine();
 
 String strOperandOne = "";
@@ -27,8 +27,7 @@ for (d = 0; d < entry.length(); d++){
   		strOperandTwo = strOperandTwo + entry.charAt(d);
   	}else {println("Something went wrong...");
 	}
-	
-	println(strOperandOne + " | " + operator + " | " + strOperandTwo);//debug
+
 }
 
 double doubOperandOne = Double.parseDouble(strOperandOne);
