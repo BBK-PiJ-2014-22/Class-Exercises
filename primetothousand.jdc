@@ -1,0 +1,33 @@
+
+int number = 2;
+int testnum = 2;
+boolean isprime = true;
+
+while (number < 1001){
+	
+	//debug println("Starting main loop"); 
+
+	//Starting from 2, check if number % testnum = 0
+	//If it is, set prime to false, and don't check anymore
+	//Keep going until you pass the 1/2 mark
+
+	testnum = 2;
+	isprime = true;
+	
+	while (isprime && testnum < (number/2)){
+		if(number % testnum == 0){
+			isprime = false;
+		}
+		testnum = testnum + 1;
+	}
+	
+	
+	if (isprime){
+		println(number);
+	}
+	
+	number = number + 1;
+	
+	
+}	
+
