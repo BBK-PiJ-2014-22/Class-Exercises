@@ -1,3 +1,4 @@
+double result = 0.0;
 
 println("Enter first number:");
 String numTextOne = System.console().readLine();
@@ -5,11 +6,24 @@ String numTextOne = System.console().readLine();
 println("Enter second number:");
 String numTextTwo = System.console().readLine();
 
-Double numDoubOne = Double.parseDouble(numTextOne);
-Double numDoubTwo = Double.parseDouble(numTextTwo);
+double numDoubOne = Double.parseDouble(numTextOne);
+double numDoubTwo = Double.parseDouble(numTextTwo);
 
-println(numDoubOne);
-println(numDoubTwo);
+println("Enter operator:");
+println("		* - Multiply");
+println("		+ - Add");
+println("		- - Subtract");
+println("		/ - Divide");
+
+String operator = System.console().readLine();
+
+if (operator.equals ("+")){
+	result = numDoubOne + numDoubTwo;
+}
+
+println(numTextOne + " " + operator + " " + numTextTwo + " = " + result);
+
+
 
 
 
