@@ -10,4 +10,9 @@ int changePounds = change.intValue();
 
 println(changePounds);
 
+int noteFifty = changePounds / 50;
 
+changePounds = changePounds - (noteFifty*50);
+
+println(noteFifty);
+println(changePounds);
