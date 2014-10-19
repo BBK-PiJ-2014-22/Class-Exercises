@@ -4,9 +4,37 @@ double purchase = Double.parseDouble(System.console().readLine());
 println("Enter Money Given");
 double moneyGiven = Double.parseDouble(System.console().readLine());
 
-Double change = moneyGiven - purchase;
+Double changeRemaining = moneyGiven - purchase;
+
+String currentPieceString = ""
+Double currentPieceNumber = 0.0
+int changeFromCurrentPiece = 0
+int ammountOfPiecesReturned = 0
+
+
+String notesAndCoins = ("50 20 10 5 2 1 0.5 0.2 0.1 0.05 0.02 0.01") 
+
+for (n = 0, n < notesAndCoins.length(), n++){
+	if (notesAndCoins.charAt(n) == ' '){
+				
+		
+		
+		
+		
+		
+			
+
+
+
+
+
+
 
 int changePounds = change.intValue();
+
+
+
+
 
 println(changePounds);
 
