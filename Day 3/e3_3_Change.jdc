@@ -1,46 +1,42 @@
 println("Enter Purchase");
-double purchase = Double.parseDouble(System.console().readLine());
+Double purchase = Double.parseDouble(System.console().readLine());
 
 println("Enter Money Given");
-double moneyGiven = Double.parseDouble(System.console().readLine());
+Double moneyGiven = Double.parseDouble(System.console().readLine());
 
 Double changeRemaining = moneyGiven - purchase;
 
-String currentPieceString = ""
-Double currentPieceNumber = 0.0
-int changeFromCurrentPiece = 0
-int ammountOfPiecesReturned = 0
+//Piece refers to any given  Note or Coin 
 
+String pieceString = "";
+Double pieceNumber = 0.0;
+Double changeFromPieceDouble = 0.0;
+Integer changeFromPiece = 0;
+Integer piecesReturned = 0;
+String descriptor = "";
 
-String notesAndCoins = ("50 20 10 5 2 1 0.5 0.2 0.1 0.05 0.02 0.01") 
+String notesAndCoins = ("50 20 10 5 2 1 0.5 0.2 0.1 0.05 0.02 0.01");
 
-for (n = 0, n < notesAndCoins.length(), n++){
+for (int n = 0; n < notesAndCoins.length(); n++){
 	if (notesAndCoins.charAt(n) == ' '){
-				
+		pieceNumber = Double.parseDouble(pieceString);
+		changeFromPieceDouble = changeRemaining - (changeRemaining % pieceNumber);
+		changeFromPiece = changeFromPieceDouble.intValue();
+		piecesReturned = (changeFromPiece / pieceNumber).intValue();
 		
+		if (pieceString.charAt(0) == '0'){
+			descriptor = " coin(s): ";
+		}else{
+			descriptor = " note(s): ";
+		}
 		
+		println("£" + pieceString + descriptor + piecesReturned);
 		
+		pieceString = "";
+		changeRemaining = changeRemaining - changeFromPiece;
 		
-		
-			
+	}else{
+		pieceString = pieceString + notesAndCoins.charAt(n);
 
-
-
-
-
-
-
-int changePounds = change.intValue();
-
-
-
-
-
-println(changePounds);
-
-int noteFifty = changePounds / 50;
-
-changePounds = changePounds - (noteFifty*50);
-
-println(noteFifty);
-println(changePounds);
+	}			
+}
