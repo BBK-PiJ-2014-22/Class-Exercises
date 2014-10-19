@@ -3,5 +3,9 @@ println("Enter Text");
 String userText = System.console().readLine();
 
 for (int l = 0; l < userText.length(); l++){
-	println(userText.charAt(l));
+	if (userText.charAt(l) != ' '){
+		print(userText.charAt(l));
+	}else{
+		println(userText.charAt(l));
+	}	
 }
