@@ -1,0 +1,28 @@
+
+println("Enter Text");
+String userText = System.console().readLine();
+String lowerText = userText.toLowerCase();
+String letterString = "  ";
+char letter = ' ';
+int letterCount = 0;
+
+while (letterString.length() != 1){
+	println("Search for which letter:");
+	letterString = System.console().readLine();
+	
+	if (letterString.length() == 1){
+		letter = letterString.charAt(0);
+	}else{
+		println("Enter single character");
+	}
+}
+
+for (int l = 0; l < lowerText.length(); l++){
+	if (lowerText.charAt(l) == letter){
+		letterCount ++;
+	}	
+}
+
+print("The sentence: '"+userText);
+print("' contains the letter "+ letter);
+println(" " + letterCount + " times.");
