@@ -1,5 +1,13 @@
-double purchase = 0.0;
-double moneyGiven = 0.0;
+println("Enter Purchase");
+double purchase = Double.parseDouble(System.console().readLine());
 
+println("Enter Money Given");
+double moneyGiven = Double.parseDouble(System.console().readLine());
+
+Double change = moneyGiven - purchase;
+
+int changePounds = change.intValue();
+
+println(changePounds);
 
 
