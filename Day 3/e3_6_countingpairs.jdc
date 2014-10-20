@@ -1,0 +1,32 @@
+
+println("Enter Text");
+String userText = System.console().readLine();
+
+println("Search for which pattern:");
+String pattern = System.console().readLine();
+
+boolean patternMatched = false;
+
+int patternCount = 0;
+
+for (int l = 0; l < (userText.length()+1 - pattern.length()); l++){
+
+	if (Character.toLowerCase(userText.charAt(l)) == 
+            Character.toLowerCase(pattern.charAt(0))){
+		for (int p = 0; p < pattern.length(); p++){
+			patternMatched = true;
+			if (Character.toLowerCase(userText.charAt(l+p)) != 
+			   Character.toLowerCase(pattern.charAt(p))){
+			   	  patternMatched = false;
+			}
+		}
+		
+		if (patternMatched){
+			patternCount ++;
+		}
+	}	
+}
+
+print("The sentence: '"+userText);
+print("' contains the pattern "+ pattern);
+println(" " + patternCount + " times.");
