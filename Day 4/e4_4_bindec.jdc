@@ -1,7 +1,8 @@
-String text = System.console().readLine();
+int text = Integer.parseInt(System.console().readLine());
 
+String result = decimal2binary(text);
 
-println(binary2decimal(text));	
+println("Number:" + result);	
 
 
 boolean binaryValid(String input){
@@ -20,15 +21,32 @@ int binary2decimal (String binary){
 	int power = 1;
 	int result = 0;
 	int digitValue = 0;
-	for (int i = binary.length()-1 ; i == -1 ; i--){
+	for (int i = binary.length()-1 ; i >= 0 ; i--){
+
 		digitValue = Character.getNumericValue(binary.charAt(i)) * power;
 		power = power * 2;
 		result = result + digitValue;
 	}
-	
 	return result;
 }
 
 		
+static String decimal2binary(int decimal){
+	int power = (decimal/2)*2;
+	String binary = "";
+	
+	while (power >0){
+		binary = binary + (decimal % power);
+		decimal = decimal / power;
+		power = power / 2;
+	}
+	
+	return binary;
+}//*/
 
 
+		
+	
+	
+		
+	
