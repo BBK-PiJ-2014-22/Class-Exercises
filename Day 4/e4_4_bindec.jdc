@@ -32,34 +32,21 @@ int binary2decimal(String binary){
 
 		
 static String decimal2binary(int decimal){
-	int power = closestPower(decimal);
-	println("Power is: "+power); //debug
+
 	String binary = "";
 	
-	while (power >0){
-		binary = binary + (decimal % power);
+	while (decimal >0){
+		binary = binary + (decimal % 2);
 		println("Binary is: "+binary); //debug
-		decimal = decimal / power;
+		decimal = decimal / 2;
 		println("Decimal is "+decimal); //debug
-		power = power / 2;
-		println("Power is: "+power); //debug
-		println("end while");//debug
+		println("end loop");//debug
 		println("");//debug
 	}
 	
 	return binary;
 }
-		
-int closestPower(int number){
-	int power = 1;
-	
-	while (power <= number){
-		power = power*2;
-	}
-	
-	return power / 2;
-}
-	
+
 	
 	
 		
