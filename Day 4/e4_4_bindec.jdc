@@ -1,20 +1,16 @@
-int text = Integer.parseInt(System.console().readLine());
-
-String result = decimal2binary(text);
-
-println("Number:" + result);	
+boolean choice = chooseBinary("[B]inary2Decimal or [D]ecimal2binary");
+String inputBinary = "";
+int inputDecimal = 0;
 
 
-boolean binaryValid(String input){
-	boolean result = true;
-	for (int i = 0; i < input.length(); i++){
-		if (!(input.charAt(i) == '1' || input.charAt(i) == '0')){
-			result = false;
-			break;
-		}
-	}
-	
-	return result;
+if (choice){
+	println("Enter Binary Number: ");
+	inputBinary = System.console().readLine();
+	println(inputBinary + "in decimal is: " + binary2decimal(inputBinary));
+}else{
+	println("Enter Decimal Number: ");
+	inputDecimal = Integer.parseInt(System.console().readLine());
+	println(inputDecimal + "in binary is: " + decimal2binary(inputDecimal));
 }
 
 int binary2decimal(String binary){
@@ -54,7 +50,30 @@ static String decimal2binary(int decimal){
 	return binary;
 }
 
+boolean chooseBinary(String description){
 	
+	String choice = "";
 	
+	while (!(choice == "b" ||
+	         choice == "d")){
+			println(description);
+			choice = System.console().readLine();
+			println(choice);//debug
+			
+			
+			if (!(choice == "bin" ||
+			      choice == "d")){
+				println("Not a valid choice");
+				println("");
+			}
+	}
 		
-	
+	if (choice == "b"){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+
+
