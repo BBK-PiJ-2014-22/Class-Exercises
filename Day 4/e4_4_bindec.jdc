@@ -33,17 +33,24 @@ int binary2decimal(String binary){
 		
 static String decimal2binary(int decimal){
 
+	String reverseBinary = "";
 	String binary = "";
 	
 	while (decimal >0){
-		binary = binary + (decimal % 2);
-		println("Binary is: "+binary); //debug
-		decimal = decimal / 2;
-		println("Decimal is "+decimal); //debug
-		println("end loop");//debug
-		println("");//debug
+		reverseBinary = reverseBinary + (decimal % 2);
+		println("Binary is: "+reverseBinary); //debug		decimal = decimal / 2;
+
 	}
 	
+	int charNum = reverseBinary.length()-1;
+	println(charNum);
+	
+	for (int i = 0; i < (reverseBinary.length()); i++ ){
+		binary = binary + reverseBinary.charAt(charNum);
+		charNum = charNum-1;
+
+	}
+		
 	return binary;
 }
 
