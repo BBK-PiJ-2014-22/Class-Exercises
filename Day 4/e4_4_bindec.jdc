@@ -61,7 +61,7 @@ boolean chooseBinary(String description){
 			println(choice);//debug
 			
 			
-			if (!(choice == "bin" ||
+			if (!(choice == "b" ||
 			      choice == "d")){
 				println("Not a valid choice");
 				println("");

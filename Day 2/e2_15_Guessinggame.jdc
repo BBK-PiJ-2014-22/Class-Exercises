@@ -1,7 +1,11 @@
 //Generate random target number
 
+println("Welcome to the guessing game!");
+println("Guess my number!");
 Double random = Math.abs(1000 * Math.random());
-int targetNumber = intValue(random);
+println(random);
+int targetNumber = random.intValue();
+println(targetNumber);
 int guessNumber = -1;
 int totalGuesses = 0;
 String guessString;
@@ -13,7 +17,7 @@ while (guessNumber != targetNumber){
 	if (targetNumber < guessNumber ){
 		println("No! My number is lower.");
 	}else if (targetNumber > guessNumber){
-		println("No! My number is lower.");
+		println("No! My number is higher.");
 	}else{
 		println("CORRECT!");
 	}
