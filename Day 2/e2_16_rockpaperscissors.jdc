@@ -16,9 +16,12 @@ while (player1score != 3 &&
 	
 	//reads play and separate sout
 	play = System.console().readLine().toLowerCase();
+	println("");
 	player1play = play.charAt(0);
 	player2play = play.charAt(1);
 	
+	println("P1: "+player1play); //debug
+	println("P2: " +player2play); //debug
 	
 	//determines the winner
 	
@@ -31,23 +34,26 @@ while (player1score != 3 &&
 	}else { winner = 2;
 	}
 	
-	//Displays results
+	println("Winner: " + winner); //debug
 	
-	if (winner == 0){
-		println("It's a draw!");
-	}else{
-		println("Player " + winner + "wins!");
+
 	
 	//adds to appropriate scores
 		switch (winner) {
 			case 0: draws ++;
+				println("It's a draw!");
+				println("Doing case 3");//debug
 				break;
 			case 1: player1score ++;
+				println("Doing case 1");//debug
+				println("Player " + winner + "wins!");
 				break;
 			case 2: player2score ++;
+				println("Doing case 2");//debug
+				println("Player " + winner + "wins!");
 				break;
 		}
-	}
+	
 	
 	println("The scores stand at:");
 	println("Player 1: " + player1score);
@@ -57,7 +63,7 @@ while (player1score != 3 &&
 }
 
 println("");
-println("The winner is " + winner + "!");
+println("The winner is player " + winner + "!");
 	
 	
 	
