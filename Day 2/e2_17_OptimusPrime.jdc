@@ -1,0 +1,25 @@
+int toCheck = 0;
+boolean loop = true;
+String input = "";
+
+for (int t = 0; t <= 10; t++){
+	input = System.console().readLine();
+	toCheck = Integer.parseInt(input);
+	println(isPrime(toCheck));
+}
+
+boolean isPrime(int number){
+	if (number <= 1){
+		return false;
+	}else if (number == 2){
+		return true;
+	}else{
+		for (int i = 2; i <= number/2 ; i++){
+			if (number % 2 == 0){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+}
