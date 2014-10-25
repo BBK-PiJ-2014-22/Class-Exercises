@@ -1,20 +1,24 @@
 double pi = 0.0;
 int number = 0;
 double divider = 1.0;
+double add = 0.0;
 
 println("enter N for pi calculation");
 
 number = Integer.parseInt(System.console().readLine());
 
-println(number);
 
-String stop = System.console().readLine();
-
-
-for (int i = 0; i >= number; i++){
-	pi += 4.0 / divider; 
-	println(number);
+for (int i = 0; i < number; i++){
+	add = 4.0 / divider;
+	pi = pi + add;
+	
+	println();//debug
+	println("Add: "+add);//debug
+	println("Number:" + number);//debug
+	println("Pi :"+pi);//debug
+	println("Divider :"+ divider);//debug
+	println();//debug
 }
 
 println(number);
-println(pi)
+println(pi);
