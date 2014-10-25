@@ -1,0 +1,24 @@
+println("Enter word to check:");
+String initialword = System.console().readLine();
+String word = "";
+String reverse = "";
+
+for (int i = 0; i < initialword.length(); i++){
+	if (Character.isLetter(initialword.charAt(i))){
+		word += Character.toLowerCase(initialword.charAt(i));
+	}
+}
+
+
+for (int l = word.length()-1 ; l >= 0 ; l--){
+	reverse = reverse + word.charAt(l);
+}
+
+
+
+if (word.equals(reverse)){
+	println("Palindrome!");
+}else{
+	println("Not a Palindrome!");
+}
+
