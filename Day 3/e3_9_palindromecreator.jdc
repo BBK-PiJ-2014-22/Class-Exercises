@@ -1,0 +1,9 @@
+println("Enter word to palindromise:");
+String word = System.console().readLine();
+String reverse = "";
+
+for (int l = word.length()-1 ; l >= 0 ; l--){
+	reverse = reverse + word.charAt(l);
+}
+
+println(word + reverse);
