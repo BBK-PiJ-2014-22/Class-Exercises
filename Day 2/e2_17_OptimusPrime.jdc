@@ -8,6 +8,7 @@ for (int t = 0; t <= 10; t++){
 	println(isPrime(toCheck));
 	println(lastPrime(toCheck));
 	println(nextPrime(toCheck));
+	println(nearestPrime(toCheck));
 
 }
 
@@ -52,3 +53,34 @@ int nextPrime(int number){
 }
 
 
+int nearestPrime(int number){
+	
+	int nextDifference = nextPrime(number) - number;
+	int lastDifference = number - lastPrime(number);
+	
+	if (nextDifference < lastDifference){
+		return nextPrime(number);
+	}else if(lastDifference < nextDifference){
+		return lastPrime(number);
+	}else if (nextPrime(number) == lastPrime(number)){
+		return number;
+	}else {
+		return 0;
+	}
+}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
