@@ -6,6 +6,9 @@ for (int t = 0; t <= 10; t++){
 	input = System.console().readLine();
 	toCheck = Integer.parseInt(input);
 	println(isPrime(toCheck));
+	println(lastPrime(toCheck));
+	println(nextPrime(toCheck));
+
 }
 
 boolean isPrime(int number){
@@ -23,3 +26,29 @@ boolean isPrime(int number){
 		return true;
 	}
 }
+
+int lastPrime(int number){
+	int check = number;
+	
+	while (check >= 2){
+		if (isPrime(check)){
+			return check;
+		}
+		check --;
+	}
+	return -2147483647;
+}
+
+int nextPrime(int number){
+	int check = number;
+	
+	while (check <= 2147483647){
+		if (isPrime(check)){
+			return check;
+		}
+		check ++;
+	}
+	return -2147483647;
+}
+
+
