@@ -1,16 +1,16 @@
+println("Enter word to check:");
 String word = System.console().readLine();
 String reverse = "";
 
-for (int l = word.length()-1 ; l == 0 ; l--){
-	reverse += word.charAt(l);
+for (int l = word.length()-1 ; l >= 0 ; l--){
+	reverse = reverse + word.charAt(l);
 }
 
-println(reverse)
 
 
 if (word.equals(reverse)){
 	println("Palindrome!");
 }else{
-	println("Not a Palindrom!");
+	println("Not a Palindrome!");
 }
 
