@@ -3,12 +3,13 @@ println("Enter Text");
 String userText = System.console().readLine();
 String lowerText = userText.toLowerCase();
 String letterString = "  ";
-String usedLetters = ""
+String usedLetters = "";
+boolean repeat = false;
 char letter = ' ';
 int letterCount = 0;
 
 //While loop exited only with break
-while (1=1){
+while (repeat == false){
 	
 	//Gets a letter from the user
 	while (letterString.length() != 1){
@@ -22,15 +23,28 @@ while (1=1){
 		}
 	}
 	
+	for (int i = 0; i < usedLetters.length(); i++){
+		if (usedLetters.charAt(i) == letter){
+			repeat = true;
+		}
+	}
 	
-	for (int l = 0; l < lowerText.length(); l++){
-		if (lowerText.charAt(l) == letter){
-			letterCount ++;
-		}	
+	if (repeat){
+		println("Repeat letter! Ending programme.");
+		break;
+	}else {	
+		for (int l = 0; l < lowerText.length(); l++){
+			if (lowerText.charAt(l) == letter){
+				letterCount ++;
+			}	
+		}
 	}
 
-print("The sentence: '"+userText);
-print("' contains the letter "+ letter);
-println(" " + letterCount + " times.");
+	print("The sentence: '"+userText);
+	print("' contains the letter "+ letter);
+	println(" " + letterCount + " times.");
+
+}
+
 
 
