@@ -10,7 +10,8 @@ int letterCount = 0;
 
 //While loop exited only with break
 while (repeat == false){
-
+	
+	letterCount = 0;
 	println("Search for which letter:");
 	letterString = System.console().readLine();
 	
@@ -25,7 +26,9 @@ while (repeat == false){
 		}
 	}
 	
+	//Checks for a repeated letter
 	for (int i = 0; i < usedLetters.length(); i++){
+		println("Testing letter: "+i);
 		if (usedLetters.charAt(i) == letter){
 			repeat = true;
 		}
@@ -34,17 +37,21 @@ while (repeat == false){
 	if (repeat){
 		println("Repeat letter! Ending programme.");
 		break;
+		
+	//Counts letters
 	}else {	
 		for (int l = 0; l < lowerText.length(); l++){
 			if (lowerText.charAt(l) == letter){
 				letterCount ++;
 			}	
 		}
+		usedLetters += letterString;
 	}
 
 	print("The sentence: '"+userText);
 	print("' contains the letter "+ letter);
-	println(" " + letterCount + " times.");
+	println(letterCount + " times.");
+	println("Used Letters: "+usedLetters);
 
 }
 
