@@ -20,22 +20,17 @@ for (int i = 0; i < number; i++){
 	
 	if (add){
 		pi = pi + change;
+		add = false;
 	}else {
 		pi = pi - change;
+		add = true;
 	}
 	
 	divider += 2;
-	
-	
-	System.out.println();//debug
-	System.out.println("Change: "+change);//debug
-	System.out.println("Number:" + number);//debug
-	System.out.println("Pi :"+pi);//debug
-	System.out.println("Divider :"+ divider);//debug
-	System.out.println();//debug
+
 }
 
-System.out.println(number);
+System.out.println("With an n of " + number + " Pi is calculated as:");
 System.out.println(pi);
 }}
 
