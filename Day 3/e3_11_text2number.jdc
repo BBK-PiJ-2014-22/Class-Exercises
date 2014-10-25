@@ -1,0 +1,27 @@
+String textNumber = System.console().readLine();
+
+boolean decimalReached = false;
+
+String mainNumber = "";
+String afterDecimal = "";
+
+double mainNumberDoub = 0.0;
+double afterDecimalDoube = 0.0;
+
+for (int i = 0 ; i < textNumber.length() ; i++){
+	
+	if (Character.isDigit(textNumber.charAt(i))){
+		if (!decimalReached){
+			mainNumber += textNumber.charAt(i);
+		}else{
+			afterDecimal += textNumber.charAt(i);
+		}
+	}else if (textNumber.charAt(i) == '.'){
+		decimalReached = true;
+	}
+}
+
+println(mainNumber);
+println(afterDecimal);
+		
+			
