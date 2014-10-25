@@ -10,16 +10,18 @@ int letterCount = 0;
 
 //While loop exited only with break
 while (repeat == false){
+
+	println("Search for which letter:");
+	letterString = System.console().readLine();
 	
-	//Gets a letter from the user
+	//Gets a letter from the user. Rejects if it's too long
 	while (letterString.length() != 1){
+		println("Enter single character");
 		println("Search for which letter:");
 		letterString = System.console().readLine();
 		
 		if (letterString.length() == 1){
 			letter = letterString.charAt(0);
-		}else{
-			println("Enter single character");
 		}
 	}
 	
