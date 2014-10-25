@@ -15,20 +15,22 @@ while (repeat == false){
 	println("Search for which letter:");
 	letterString = System.console().readLine();
 	
-	//Gets a letter from the user. Rejects if it's too long
-	while (letterString.length() != 1){
-		println("Enter single character");
-		println("Search for which letter:");
-		letterString = System.console().readLine();
-		
-		if (letterString.length() == 1){
-			letter = letterString.charAt(0);
+	if (!(letterString.length() == 1)){
+	
+		//Gets a letter from the user. Rejects if it's too long 
+		while (letterString.length() != 1){
+			println("Enter single character");
+			println("Search for which letter:");
+			letterString = System.console().readLine();
+
 		}
 	}
 	
+	letter = letterString.charAt(0);	
+	
+	
 	//Checks for a repeated letter
 	for (int i = 0; i < usedLetters.length(); i++){
-		println("Testing letter: "+i);
 		if (usedLetters.charAt(i) == letter){
 			repeat = true;
 		}
@@ -50,7 +52,7 @@ while (repeat == false){
 
 	print("The sentence: '"+userText);
 	print("' contains the letter "+ letter);
-	println(letterCount + " times.");
+	println(" "+letterCount + " times.");
 	println("Used Letters: "+usedLetters);
 
 }
