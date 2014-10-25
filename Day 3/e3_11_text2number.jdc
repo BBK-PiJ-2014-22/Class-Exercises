@@ -1,3 +1,5 @@
+println("Enter text number");
+
 String textNumber = System.console().readLine();
 
 boolean decimalReached = false;
@@ -8,6 +10,7 @@ String afterDecimal = "";
 int mainNumberInt = 0;
 int afterDecimalInt = 0;
 
+double afterDecimalDoub = 0.0;
 double result = 0.0;
 
 for (int i = 0 ; i < textNumber.length() ; i++){
@@ -25,11 +28,14 @@ for (int i = 0 ; i < textNumber.length() ; i++){
 
 mainNumberInt = Integer.parseInt(mainNumber);
 afterDecimalInt = Integer.parseInt(afterDecimal);
+afterDecimalDoub = (double)afterDecimalInt / Math.pow(10.0 ,
+	           (double)afterDecimal.length());
+
+result = mainNumberInt + afterDecimalDoub;
+
 
 println(mainNumberInt);
-pritln((afterDecimalInt * 10^-afterDecimal.length()));
-
-result = mainNumberInt + (afterDecimalInt * 10^-afterDecimal.length());
+println(afterDecimalDoub);
 
 println(result);
 			
