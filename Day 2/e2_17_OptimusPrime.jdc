@@ -2,15 +2,10 @@ int toCheck = 0;
 boolean loop = true;
 String input = "";
 
-for (int t = 0; t <= 10; t++){
-	input = System.console().readLine();
-	toCheck = Integer.parseInt(input);
-	println(isPrime(toCheck));
-	println(lastPrime(toCheck));
-	println(nextPrime(toCheck));
-	println(nearestPrime(toCheck));
+println("Enter number to find the nearest prime");
+toCheck = Integer.parseInt(System.console().readLine());
+println("Nearest Prime is: " + nearestPrime(toCheck));
 
-}
 
 boolean isPrime(int number){
 	if (number <= 1){
