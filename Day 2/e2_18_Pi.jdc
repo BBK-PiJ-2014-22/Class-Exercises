@@ -1,19 +1,28 @@
 double pi = 0.0;
 int number = 0;
 double divider = 1.0;
-double add = 0.0;
-
+double change = 0.0;
+boolean add = true;
 println("enter N for pi calculation");
 
 number = Integer.parseInt(System.console().readLine());
 
 
 for (int i = 0; i < number; i++){
-	add = 4.0 / divider;
-	pi = pi + add;
+	
+	change = 4.0 / divider;
+	
+	if (add){
+		pi = pi + change;
+	}else {
+		pi = pi - change;
+	}
+	
+	divider += 2;
+	
 	
 	println();//debug
-	println("Add: "+add);//debug
+	println("Change: "+change);//debug
 	println("Number:" + number);//debug
 	println("Pi :"+pi);//debug
 	println("Divider :"+ divider);//debug
