@@ -1,0 +1,23 @@
+
+int result = Integer.parseInt(System.console().readLine());
+
+result = mcCarthy91(result);
+
+println(result);
+	
+
+
+
+int mcCarthy91(int n) {
+	int result = 0;
+	if (n > 100) {
+		result = n- 10;
+		println(result);
+		return result;
+	} else {
+		println(n);
+		result = mcCarthy91(mcCarthy91(n+11));
+		return result;
+	}
+}
+
