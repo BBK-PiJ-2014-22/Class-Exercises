@@ -1,0 +1,10 @@
+String paperSize(String aSize){
+		
+	if (aSize == "A0") {
+		return "841";
+	} e
+	
+	
+}
+	
+	
