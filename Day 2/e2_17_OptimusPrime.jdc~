@@ -1,0 +1,54 @@
+int toCheck = 0;
+boolean loop = true;
+String input = "";
+
+for (int t = 0; t <= 10; t++){
+	input = System.console().readLine();
+	toCheck = Integer.parseInt(input);
+	println(isPrime(toCheck));
+	println(lastPrime(toCheck));
+	println(nextPrime(toCheck));
+
+}
+
+boolean isPrime(int number){
+	if (number <= 1){
+		return false;
+	}else if (number == 2){
+		return true;
+	}else{
+		for (int i = 2; i <= number/2 ; i++){
+			if (number % i == 0){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+}
+
+int lastPrime(int number){
+	int check = number;
+	
+	while (check >= 2){
+		if (isPrime(check)){
+			return check;
+		}
+		check --;
+	}
+	return -2147483647;
+}
+
+int nextPrime(int number){
+	int check = number;
+	
+	while (check <= 2147483647){
+		if (isPrime(check)){
+			return check;
+		}
+		check ++;
+	}
+	return -2147483647;
+}
+
+
