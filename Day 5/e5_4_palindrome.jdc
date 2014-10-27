@@ -1,16 +1,12 @@
 while (true){
-	println(Palindrome(System.console().readLine()));
+	println(palindrome(System.console().readLine()));
 }
 
-boolean Palindrome(String word){
-	if (word.length() <= 2){
-		if (word.length() == 1 ||
-		    word.charAt(0) == word.charAt(1)){
-			return true;
-		}else{
-			return false;
-		}
-	}else if (Palindrome(word.substring(1,word.length()-1))){
+boolean palindrome(String word){
+	if (word.length() <= 1){
+		return true;
+	}else if (palindrome(word.substring(1,word.length()-1)) &&
+		  word.charAt(0) == word.charAt(word.length()-1)){
 		return true;
 	}else {
 		return false;
