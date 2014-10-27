@@ -1,0 +1,18 @@
+int base = 0;
+int exponent = 0;
+
+while (true){
+	base = Integer.parseInt(System.console().readLine());
+	exponent = Integer.parseInt(System.console().readLine());
+	println(pow(base,exponent));
+	println("");
+}
+
+int pow(int base, int exponent){
+	if (exponent == 1){
+		return base;
+	}else {
+		return base * pow(base, exponent-1);
+	}
+}
+

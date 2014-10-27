@@ -1,0 +1,8 @@
+bigStack(1);
+
+int bigStack(int stacksize){
+	println(stacksize);
+	return(bigStack(stacksize+1));
+}
+
+
