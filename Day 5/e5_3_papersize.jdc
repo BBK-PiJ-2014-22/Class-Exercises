@@ -1,5 +1,43 @@
-int paperLength(String dinSize){
-	if (dinSize == "A0"){
-		return 1189;
-	} else if {
-		
+
+//test cases from A00000 to A5
+ 
+String test0 = "A00000";
+
+for (int i = 0; i < 5; i++){
+	println(axPaperSize(test0.substring(0,i)));
+}
+ 
+ 
+for (int i = 0; i < 5; i++){
+	println(axPaperSize("A"+i));
+}
+
+/*String axPaperSize(String paperSize){
+	longEdge = calcSize(paperSize);
+	shortEdge = longEdge/2;
+	String size = longEdge + "mm / "+ shortEdge + " mm";
+	return size;
+}*/
+
+//Below method is broken
+//If you change to an int and return to a number it compiles
+//As written it returns "Expected ;"
+
+String axPaperSize(String paperSize){
+	return "wtf";
+}
+                                                       
+int calcSize(String paperSize){
+               
+	if (paperSize == "A0"){
+		return 1000;
+ 
+	} else if (paperSize.charAt(1) == 0){
+		return calcSize(paperSize.substring(0,paperSize.length()-1)) * 2;
+        } else {
+        	int length = paperSize.length();
+        	String smallerSize = paperSize.substring(1, length);
+        	int number = Integer.parseInt(smallerSize)-1;
+        	return calcSize("A" + number)/2;
+        }
+ }
