@@ -12,6 +12,7 @@ for (int i = 0; i < 5; i++){
 	println(axPaperSize("A"+i));
 }
 
+//Actual method
 /*String axPaperSize(String paperSize){
 	longEdge = calcSize(paperSize);
 	shortEdge = longEdge/2;
@@ -20,13 +21,19 @@ for (int i = 0; i < 5; i++){
 }*/
 
 //Below method is broken
-//If you change to an int and return to a number it compiles
-//As written it returns "Expected ;"
 
 String axPaperSize(String paperSize){
 	return "wtf";
 }
-                                                       
+
+
+//Below method works
+/*
+int axPaperSize(String paperSizr){
+	return 1;
+}
+*/
+
 int calcSize(String paperSize){
                
 	if (paperSize == "A0"){
