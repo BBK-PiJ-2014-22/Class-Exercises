@@ -1,0 +1,5 @@
+int paperLength(String dinSize){
+	if (dinSize == "A0"){
+		return 1189;
+	} else if {
+		
