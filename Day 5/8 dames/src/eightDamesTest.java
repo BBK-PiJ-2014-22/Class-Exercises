@@ -19,11 +19,11 @@ public class eightDamesTest {
 		edTestTakeHorizontal(0,0, 2,0,true,"takeHorizontal test 4 failed");
 		edTestTakeHorizontal(7,0, 2,0,true,"takeHorizontal test 5 failed");
 		
-		ChessBoard cb = new ArrayChessBoard();
+		ChessBoard cb = new ChessBoard();
 		
-		cb.addBoard(new ArrayChessBoard());
-		cb.addBoard(new ArrayChessBoard());
-		cb.addBoard(new ArrayChessBoard());
+		cb.addBoard(new ChessBoard());
+		cb.addBoard(new ChessBoard());
+		cb.addBoard(new ChessBoard());
 		
 		System.out.println(cb.boardCount());
 		

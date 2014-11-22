@@ -1,23 +1,77 @@
 
-public interface ChessBoard {
+public class ChessBoard{
+
+	int[][] board = new int[8][8];
+	ChessBoard nextBoard;
+	ChessBoard lastBoard;
 	
-	int boardCount();
-	/** Counts the number of boards in the list*/
+	public ChessBoard(){
 		
-	void addBoard(ChessBoard newboard);
-	/** adds a newboard to thelist*/
+	}
 	
-	ChessBoard getNext();
-	/** returns the next board in the list*/
-	
-	boolean isValid();
-	/**Checks if the board is a valid 8 dames entry*/
-	
-	void generateBoards();
-	/** generates all boards*/
-	
-	void removeBoard();
-	/** removes a board from the list*/
+	public ChessBoard(int x, int y){
+		
+	}
 	
 	
+	public int boardCount() {
+		if (this.nextBoard == null){
+			return 1;
+		}else{
+			return this.getNextBoard().boardCount()+1;
+		}
+	}
+	
+	public void addBoard(ChessBoard newBoard) {
+		if (this.getNextBoard() == null){
+			this.nextBoard = newBoard;
+			this.nextBoard.lastBoard = this;
+		}else{
+			this.getNextBoard().addBoard(newBoard);
+		}
+	}
+	
+	public void removeBoard(){
+		this.lastBoard.nextBoard = this.nextBoard;
+	}
+	
+	
+	public int[][] getBoard() {
+		return board;
+	}
+
+	public void setBoard(int[][] board) {
+		this.board = board;
+	}
+
+	public ChessBoard getNextBoard() {
+		return nextBoard;
+	}
+
+	private void setNextBoard(ChessBoard newBoard){
+		this.nextBoard = newBoard;
+	}
+
+	public ChessBoard getNext() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean isValid() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	public void generateBoards() {
+		// TODO Auto-generated method stub
+
+	}
+	
+
+	
+	public void setNext(){
+		
+	}
+
 }
